@@ -10,11 +10,11 @@ Sprite::Sprite()
 	}
 }
 
-SDL_Renderer* Sprite::draw(int h, int w, Position &p, SDL_Renderer *rend)
+SDL_Renderer* Sprite::drawCharacter(int h, int w, Position &p, SDL_Renderer *rend, int loop)
 {
 	sRect.h = h;
 	sRect.w = w;
-	sRect.x = 0;
+	sRect.x = loop * h;
 	sRect.y = 0;
 	
 	dRect.h = h;

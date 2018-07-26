@@ -33,6 +33,7 @@ private:
 
 	ui text;
 
+	int spriteLoop;
 
 	Actor Musungo;
 	Enemy Baddies;

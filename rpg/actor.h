@@ -23,8 +23,9 @@ public:
 	Actor();
 	void init(SDL_Renderer *rend);
 	void enqueue(Input playerMoves);
+	Creature *getCreature() { return c; }
 	void update();
-	void render(SDL_Renderer *rend );
+	void render(SDL_Renderer *rend , int L = 0);
 	~Actor();
 };
 

@@ -10,7 +10,6 @@ Actor::Actor()
 void Actor::init(SDL_Renderer *rend)
 {
 	c = new Creature;
-	c->spr.createSprite("C:/Users/Timothy/source/repos/Rpg/rpg/Sprites/mio.png", rend);
 	c->stat.setDefaults();
 }
 
@@ -59,9 +58,9 @@ void Actor::update()
 	}
 }
 
-void Actor::render(SDL_Renderer * rend)
+void Actor::render(SDL_Renderer * rend, int L)
 {
-	c->spr.draw(40, 35, p, rend);
+	c->spr.drawCharacter(40, 35, p, rend, L);
 }
 
 Actor::~Actor()

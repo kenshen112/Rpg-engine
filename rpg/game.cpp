@@ -11,6 +11,7 @@ void Game::init()
 	window = SDL_CreateWindow("Rpg", 12, 12, window_H, window_W, 0);
 	rend = SDL_CreateRenderer(window, -1, 0);
 	Musungo.init(rend);
+	Musungo.getCreature()->spr.createSprite("C:/Users/Timothy/source/repos/Rpg/rpg/Sprites/mio.png", rend);
 
 	if (rend == NULL)
 	{
@@ -19,6 +20,9 @@ void Game::init()
 		SDL_RenderClear(rend);
 }
 
+/********************************
+* A preliminary Event sender.
+*********************************/
 void Game::update()
 {
 	while (active)
@@ -29,7 +33,7 @@ void Game::update()
 			NOW = SDL_GetPerformanceCounter();
 			deltaTime = (double)((NOW - LAST) * 1000 / SDL_GetPerformanceFrequency());
 			render();
-
+			spriteLoop = deltaTime * 4;
 			if (e.type == SDL_KEYDOWN)
 			{
 				switch (e.key.keysym.sym)
@@ -68,7 +72,7 @@ void Game::update()
 
 void Game::render()
 {
-	Musungo.render(rend);
+	Musungo.render(rend, spriteLoop);
 	text.textBox(500, 500, "Test", rend);
 	SDL_RenderPresent(rend);
 }

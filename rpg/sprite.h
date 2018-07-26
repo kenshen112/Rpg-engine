@@ -15,7 +15,7 @@ private:
 public:
 	Sprite();
 	SDL_Texture* createSprite(const char *fileName, SDL_Renderer *rend);
-	SDL_Renderer* draw(int h, int w, Position &p, SDL_Renderer *rend);
+	SDL_Renderer* drawCharacter(int h, int w, Position &p, SDL_Renderer *rend, int loop = 0);
 	
 	~Sprite();
 };
