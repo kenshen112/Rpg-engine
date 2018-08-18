@@ -11,7 +11,8 @@ void Game::init()
 	window = SDL_CreateWindow("Rpg", 12, 12, window_H, window_W, 0);
 	rend = SDL_CreateRenderer(window, -1, 0);
 	Musungo.init(rend);
-	Musungo.getCreature()->spr.createSprite("C:/Users/Timothy/source/repos/Rpg/rpg/Sprites/mio.png", rend);
+	Baddies.init();
+	Musungo.getCreature()->spr.createSprite("C:/Users/Timothy/source/repos/Rpg-engine/rpg/Sprites/mio.png", rend);
 
 	if (rend == NULL)
 	{
@@ -75,6 +76,7 @@ void Game::render()
 	Musungo.render(rend, spriteLoop);
 	text.textBox(500, 500, "Test", rend);
 	SDL_RenderPresent(rend);
+	Baddies.printTest();
 }
 
 void Game::process()

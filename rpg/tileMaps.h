@@ -1,27 +1,23 @@
 #pragma once
-#include <string>
 #include <SDL.h>
-enum Types{WATER, GRASS, STONE, WALL};
-
-struct Tile
-{
-	int sizeX;
-	int sizeY;
-	std::string name;
-	int properties;
-	bool isSolid;
-};
+#include <vector>
+#include <string>
+#include <SDL_image.h>
 
 class TileMaps
 {
 private:
-	Types type;
-	Tile tile;
-	std::string fileName;
+	int row;
+	int col;
+	int w;
+	int h;
 	int layers;
+	SDL_Texture *renderedMap;
+	std::string fileName;
 
 public:
 	TileMaps();
+	void load(std::string fileName, SDL_Renderer *rend);
 	~TileMaps();
 };
 

@@ -1,27 +1,30 @@
 #pragma once
-#include "creature.h"
 #include <vector>
 #include <fstream>
-using nlohmann::json;
+#include "creature.h"
+#include <rapidJson/document.h>
 
 class Enemy
 {
 
 private:		
-	std::vector <Creature> enemy;
-	
-	json read;
+	std::vector <Enemy*> enemy;
+		
+	Creature villan;
 	
 	std::ifstream fin;
 	std::string name;
 	std::string type;
 	std::string attack;
 	
-	Creature e;
 
 public:
 	Enemy();
+	Enemy(const Enemy& bad);
+	Enemy operator=(const Enemy& bad);
+
 	void init();
+	void printTest();
 
 	~Enemy();
 };
