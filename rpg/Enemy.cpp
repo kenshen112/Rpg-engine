@@ -17,19 +17,30 @@ Enemy Enemy::operator=(const Enemy & bad)
 	return Enemy();
 }
 
+ Enemy* Enemy::create(Enemy* listVillan)
+ {
+	 listVillan = new Enemy;
+
+	 listVillan->name = baddie["Name"].get<std::string>();
+
+
+
+	return listVillan;
+}
+
 void Enemy::init()
 {
 	fin.open("Enemies.json");
 
 	int i = 0;
 
-	Enemy *Baddie;
+	Enemy* villans;
 
-	while (fin >> read && i < 100) 
+	while (fin >> baddie && i < 100) 
 	{
-		Baddie = new Enemy;
 		
-		enemy.push_back(Baddie);
+		create(villans);
+
 		i++;
 	}
 
