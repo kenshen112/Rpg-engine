@@ -17,31 +17,33 @@ Enemy Enemy::operator=(const Enemy & bad)
 	return Enemy();
 }
 
- Enemy* Enemy::create(Enemy* listVillan)
+ Enemy* Enemy::create()
  {
-	 listVillan = new Enemy;
+	Enemy* listVillan = new Enemy;
 
-	 listVillan->name = baddie["Name"].get<std::string>();
+	assert(baddie.is_array());
 
-
-
+	for (auto& element : baddie)
+	{
+		listVillan->attack = element["Attack"].get<std::string>();
+		int health = element["HP"].get<int>();
+		listVillan->villan.stat.maxHP(health);
+	}
 	return listVillan;
 }
 
 void Enemy::init()
 {
-	fin.open("Enemies.json");
+	fin.open("Data/Enemies.json");
 
 	int i = 0;
 
-	Enemy* villans;
 
 	while (fin >> baddie && i < 100) 
-	{
-		
-		create(villans);
-
-		i++;
+	{		
+	listOfVillans =  create();
+	enemy.push_back(listOfVillans);	
+	i++;
 	}
 
 }

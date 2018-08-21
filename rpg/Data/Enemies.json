@@ -1,22 +1,21 @@
-{
-	"Dragon": [
-	    {
-			"Name": "Base Dragon",
-			"Type": "Dragon",
-			"HP": "100",
-			"Attack": "Bite"
-		},
+[{
+		"Name": "Base Dragon",
+		"Type": "Dragon",
+		"HP": 100,
+		"Attack": "Bite"
 
-		{
-			"Name": "Red Dragon",
-			"Type": "Dragon"
-		}
-	],
+	},
 
-	"Wolf": [{
+	{
+		"Name": "Red Dragon",
+		"Type": "Dragon"
+	},
+
+	{
 		"Name": "Base Wolf",
 		"Type": "Wolf",
-		"HP": "50",
+		"HP": 50,
 		"Attack": "Fangs"
-	}]
-}
+
+	}
+]
