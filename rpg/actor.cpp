@@ -1,8 +1,5 @@
 #include "actor.h"
 
-
-
-
 Actor::Actor()
 {
 }
@@ -30,28 +27,28 @@ void Actor::update()
 	case Input::UP:	
 		std::cout << "UP" << std::endl;
 		vel.addDy(5.00);
-		p.setPy(p.getPy() + vel.getDy());
+		c->pos.setPy(c->pos.getPy() + vel.getDy());
 		eventQueue.pop();
 		r = 0;
 		break;
 
 	case Input::DOWN:
 		vel.addDy(-5);
-		p.setPy(p.getPy() + vel.getDy());
+		c->pos.setPy(c->pos.getPy() + vel.getDy());
 		eventQueue.pop();
 		r = 0;
 		break;
 
 	case Input::LEFT:
 		vel.addDx(-5.00);
-		p.setPx(p.getPx() + vel.getDx());
+		c->pos.setPx(c->pos.getPx() + vel.getDx());
 		eventQueue.pop();
 		r = 0;
 		break;
 
 	case Input::RIGHT:
 		vel.addDx(5.00);
-		p.setPx(p.getPx() + vel.getDx());
+		c->pos.setPx(c->pos.getPx() + vel.getDx());
 		eventQueue.pop();
 		r = 0;
 		break;
@@ -60,7 +57,7 @@ void Actor::update()
 
 void Actor::render(SDL_Renderer * rend, int L)
 {
-	c->spr.drawCharacter(40, 35, p, rend, L);
+	c->spr.drawCharacter(40, 35, c->pos, rend, L);
 }
 
 Actor::~Actor()

@@ -10,7 +10,9 @@ private:
 public:
 	Stats()
 	{
-	
+		mHP = 0;
+		tempHP = 0;
+		level = 0;
 	}
 	
 	void setDefaults()

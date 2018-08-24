@@ -4,26 +4,27 @@
 #include "move.h"
 
 #include "creature.h"
-#include "position.h"
 #include "velocity.h"
 
 const enum Input { UP, DOWN, LEFT, RIGHT };
+
+using json = nlohmann::json;
 
 class Actor
 {
 private:
 	std::queue <Input> eventQueue;
-	Creature *c;
 	Move M;
 	Velocity vel;
-	Position p;
+	json actors = NULL;
+	Creature *c;
 	int r;
 
 public:
 	Actor();
+	Creature *getCreature() { return c; }
 	void init(SDL_Renderer *rend);
 	void enqueue(Input playerMoves);
-	Creature *getCreature() { return c; }
 	void update();
 	void render(SDL_Renderer *rend , int L = 0);
 	~Actor();

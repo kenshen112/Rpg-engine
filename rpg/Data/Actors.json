@@ -1,0 +1,14 @@
+[{
+"Name": "Musungo",
+"Type": "Dragon",
+"Sprite": "Data/Sprites/mio.png",
+"HP": 100,
+"Attack": "Sword_Attack"
+},
+
+{
+"Name" : "Doku"
+"Type" : "Dragon"
+"HP" : 600
+"Attack" : "Lightning Beam"
+}]

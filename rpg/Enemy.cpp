@@ -17,7 +17,7 @@ Enemy Enemy::operator=(const Enemy & bad)
 	return Enemy();
 }
 
- Enemy* Enemy::create()
+ Enemy* Enemy::create(json baddie)
  {
 	Enemy* listVillan = new Enemy;
 
@@ -28,23 +28,19 @@ Enemy Enemy::operator=(const Enemy & bad)
 		listVillan->attack = element["Attack"].get<std::string>();
 		int health = element["HP"].get<int>();
 		listVillan->villan.stat.maxHP(health);
+		listVillan->name = element["Name"].get<std::string>();
+		std::cout << "Name: " << listVillan->name << std::endl;
 	}
 	return listVillan;
 }
 
 void Enemy::init()
 {
-	fin.open("Data/Enemies.json");
+	fin.open("C:/Users/Timothy/source/repos/Rpg-engine/rpg/Data/Enemies.json");
+	json baddie = json::parse(fin);
 
-	int i = 0;
-
-
-	while (fin >> baddie && i < 100) 
-	{		
-	listOfVillans =  create();
+	listOfVillans =  create(baddie);
 	enemy.push_back(listOfVillans);	
-	i++;
-	}
 
 }
 

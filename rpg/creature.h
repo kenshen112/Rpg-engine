@@ -2,7 +2,6 @@
 #include <vector>
 #include "json.hpp"
 
-
 #include "position.h"
 #include "stats.h"
 #include "sprite.h"

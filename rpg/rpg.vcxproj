@@ -126,6 +126,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="actor.cpp" />
+    <ClCompile Include="Battle.cpp" />
+    <ClCompile Include="Characters.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Events.cpp" />
     <ClCompile Include="game.cpp" />
@@ -139,6 +141,8 @@
     <ClCompile Include="velocity.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Battle.h" />
+    <ClInclude Include="Characters.h" />
     <ClInclude Include="common.h" />
     <ClInclude Include="creature.h" />
     <ClInclude Include="Enemy.h" />
