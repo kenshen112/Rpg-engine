@@ -16,7 +16,6 @@ private:
 	std::string name;
 	std::string type;
 	std::string attack;
-	//json baddie = json::parse(fin);
 
 public:
 	Enemy();
@@ -25,7 +24,6 @@ public:
 	Enemy* create(json baddie);
 
 	void init();
-	void printTest();
 
 	~Enemy();
 };

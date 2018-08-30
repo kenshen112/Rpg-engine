@@ -13,7 +13,7 @@ class Tile
 private:
 	int x;
 	int y;
-	std::string tileType;
+	int tileType;
 	SDL_Rect srcTile;
 
 public:
@@ -21,10 +21,10 @@ public:
 	{
 		x = 0;
 		y = 0;
-		tileType = nullptr;
+		tileType = NULL;
 	}
 
-	Tile(int dx, int dy, std::string tile)
+	Tile(int dx, int dy, int tile)
 	{
 		x = dx;
 		y = dy;

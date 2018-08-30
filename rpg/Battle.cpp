@@ -6,6 +6,10 @@ Battle::Battle()
 {
 }
 
+void Battle::startBattle()
+{
+}
+
 
 Battle::~Battle()
 {

@@ -76,7 +76,6 @@ void Game::render()
 	Musungo.render(rend, spriteLoop);
 	text.textBox(500, 500, "Test", rend);
 	SDL_RenderPresent(rend);
-	Baddies.printTest();
 }
 
 void Game::process()

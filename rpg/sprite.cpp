@@ -14,7 +14,7 @@ SDL_Renderer* Sprite::drawCharacter(int h, int w, Position &p, SDL_Renderer *ren
 {
 	sRect.h = h;
 	sRect.w = w;
-	sRect.x = loop * h;
+	sRect.x = p.getPx() * h;
 	sRect.y = 0;
 	
 	dRect.h = h;

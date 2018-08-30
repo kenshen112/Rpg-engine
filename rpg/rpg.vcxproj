@@ -134,6 +134,7 @@
     <ClCompile Include="Invetory.cpp" />
     <ClCompile Include="Items.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Party.cpp" />
     <ClCompile Include="skills.cpp" />
     <ClCompile Include="sprite.cpp" />
     <ClCompile Include="tileMaps.cpp" />
@@ -153,6 +154,7 @@
     <ClInclude Include="json.hpp" />
     <ClInclude Include="move.h" />
     <ClInclude Include="actor.h" />
+    <ClInclude Include="Party.h" />
     <ClInclude Include="position.h" />
     <ClInclude Include="skills.h" />
     <ClInclude Include="sprite.h" />

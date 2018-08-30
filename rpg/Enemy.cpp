@@ -12,11 +12,18 @@ Enemy::Enemy(const Enemy & bad)
 	this->attack = bad.attack;
 }
 
+/********************************************************
+* This is needed since were making a vector it has to be
+* a copieable object or I need to rule of zero's this.
+*********************************************************/
 Enemy Enemy::operator=(const Enemy & bad)
 {
 	return Enemy();
 }
 
+/*************************************************************
+* Some serious rule of Zero's copy constructor magic below
+**************************************************************/
  Enemy* Enemy::create(json baddie)
  {
 	Enemy* listVillan = new Enemy;
@@ -29,7 +36,6 @@ Enemy Enemy::operator=(const Enemy & bad)
 		int health = element["HP"].get<int>();
 		listVillan->villan.stat.maxHP(health);
 		listVillan->name = element["Name"].get<std::string>();
-		std::cout << "Name: " << listVillan->name << std::endl;
 	}
 	return listVillan;
 }
@@ -39,18 +45,9 @@ void Enemy::init()
 	fin.open("C:/Users/Timothy/source/repos/Rpg-engine/rpg/Data/Enemies.json");
 	json baddie = json::parse(fin);
 
-	listOfVillans =  create(baddie);
+	listOfVillans = create(baddie);
 	enemy.push_back(listOfVillans);	
 
-}
-
-void Enemy::printTest()
-{
-	for (auto &it : enemy)
-	{
-		std::cout << it->name << std::endl;
-		std::cout << it->type << std::endl;
-	}
 }
 
 Enemy::~Enemy()

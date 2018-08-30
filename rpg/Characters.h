@@ -9,15 +9,16 @@ class Characters
 {
 private:
 	std::string Name;
-	Creature *party;
+	std::string attack;
 	std::ifstream fin;
-	json players;
+	Creature *party;
+	json Heros;
 
 
 public:
 	Characters();
 	bool openFile();
-	void createCharacters();
+	Characters *createCharacters();
 
 	~Characters();
 };

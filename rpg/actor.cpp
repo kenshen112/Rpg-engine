@@ -55,6 +55,10 @@ void Actor::update()
 	}
 }
 
+/****************************************
+* L is meant for animation loop
+* This will be highly refactored later. 
+***************************************/
 void Actor::render(SDL_Renderer * rend, int L)
 {
 	c->spr.drawCharacter(40, 35, c->pos, rend, L);
