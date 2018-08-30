@@ -88,10 +88,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Timothy\source\repos\Rpg-engine\rpg\Data\include\rapidJson;C:\Users\Timothy\Documents\SDL2-2.0.8\include;C:\Users\Timothy\Documents\SDL2_ttf-2.0.14\include;C:\Users\Timothy\Documents\SDL2_image-2.0.3\include;C:\Users\Timothy\source\repos\Rpg-engine\rpg\Data\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Timothy\source\repos\Rpg-engine\rpg\Data\include\libtmxlite\include;C:\Users\Timothy\source\repos\Rpg-engine\rpg\Data\include\rapidJson;C:\Users\Timothy\Documents\SDL2-2.0.8\include;C:\Users\Timothy\Documents\SDL2_ttf-2.0.14\include;C:\Users\Timothy\Documents\SDL2_image-2.0.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\Timothy\Documents\SDL2_ttf-2.0.14\lib\x64;C:\Users\Timothy\Documents\SDL2_image-2.0.3\lib\x64;C:\Users\Timothy\source\repos\Rpg-engine\rpg\Data\library\SDL\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Timothy\source\repos\Rpg-engine\rpg\Data\library\libtmxlite\DebugStatic;C:\Users\Timothy\Documents\SDL2_ttf-2.0.14\lib\x64;C:\Users\Timothy\Documents\SDL2_image-2.0.3\lib\x64;C:\Users\Timothy\source\repos\Rpg-engine\rpg\Data\library\SDL\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
