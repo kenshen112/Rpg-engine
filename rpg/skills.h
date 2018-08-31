@@ -1,14 +1,14 @@
 #pragma once
+#include <iostream>
+#include <string.h>
 #include "creature.h"
 class Skills
 {
 private:
 	std::string name;
-	std::string job;
-	Stats stats;
 public:
 	Skills();
-	virtual void apply() = 0;
+	virtual void apply(Creature c, int hp) = 0;
 	virtual void update() = 0;
 	
 	~Skills();
@@ -17,28 +17,15 @@ public:
 class Healing : public Skills
 {
 	
-	void apply()
-	{
-	
-	}
-
-	void update()
-	{
-	
-	}
+	void apply(Creature c, int hp);
+	void update();
 };
 
 class Damaging : public Skills
 {
 
-	void apply()
-	{
+	void apply(Creature c, int hp);
 
-	}
-
-	void update()
-	{
-
-	}
+	void update();
 };
 

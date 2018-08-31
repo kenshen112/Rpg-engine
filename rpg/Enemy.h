@@ -22,7 +22,10 @@ public:
 	Enemy(const Enemy& bad);
 	Enemy operator=(const Enemy& bad);
 	Enemy* create(json baddie);
-
+	Enemy* getEnemy(int id)
+	{
+		return enemy[id];
+	}
 	void init();
 
 	~Enemy();

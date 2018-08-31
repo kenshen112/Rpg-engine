@@ -11,7 +11,6 @@ struct Creature
 {
 	Position pos;
 	Stats stat; 
-	Sprite spr;
 	Invetory inv;
 };
 

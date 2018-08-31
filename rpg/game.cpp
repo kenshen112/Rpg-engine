@@ -12,7 +12,6 @@ void Game::init()
 	rend = SDL_CreateRenderer(window, -1, 0);
 	Musungo.init(rend);
 	Baddies.init();
-	Musungo.getCreature()->spr.createSprite("C:/Users/Timothy/source/repos/Rpg-engine/rpg/Sprites/mio.png", rend);
 
 	if (rend == NULL)
 	{

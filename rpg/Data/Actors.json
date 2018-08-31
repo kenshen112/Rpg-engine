@@ -1,7 +1,6 @@
 [{
 "Name": "Musungo",
 "Type": "Dragon",
-"Sprite": "Data/Sprites/mio.png",
 "HP": 100,
 "Attack": "Sword_Attack"
 },

@@ -13,8 +13,9 @@ Enemy::Enemy(const Enemy & bad)
 }
 
 /********************************************************
-* This is needed since were making a vector it has to be
-* a copieable object or I need to rule of zero's this.
+* This and the copy constructor above are needed since were 
+* making a vector it has to be a copieable object or I need to 
+* rule of zero's this class.
 *********************************************************/
 Enemy Enemy::operator=(const Enemy & bad)
 {

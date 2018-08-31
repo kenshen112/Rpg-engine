@@ -21,6 +21,14 @@ bool Characters::openFile()
 	}
 }
 
+bool Characters::canApplySkill()
+{
+	return false;
+}
+
+/********************************************
+* Why doesn't this need a copy constructor?
+*******************************************/
 Characters *Characters::createCharacters()
 {
 	Characters *plusUltra = new Characters();

@@ -18,6 +18,7 @@ private:
 public:
 	Characters();
 	bool openFile();
+	bool canApplySkill();
 	Characters *createCharacters();
 
 	~Characters();
