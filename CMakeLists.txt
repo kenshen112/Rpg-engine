@@ -2,10 +2,15 @@
 
 cmake_minimum_required(VERSION 3.12)
 
+# includes cmake/FindSDL2.cmake
+set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
-add_exacuteable(rpg ${PROJECT_SOURCE_DIR}/main.cpp)
+find_package(SDL2 REQUIRED)
+include_directories(${SDL2_INCLUDE_DIR})
 
+INCLUDE(FindPkgConfig)
 
-SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin)
+set(SOURCE_FILES main.cpp)
 
-include_directories("${PROJECT_SOURCE_DIR}")
+add_executable(rpg ${SOURCE_FILES})
+target_link_libraries(rpg ${SDL2_LIBRARY})
