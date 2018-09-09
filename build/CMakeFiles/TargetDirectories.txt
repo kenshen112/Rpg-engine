@@ -1,3 +1,2 @@
 /home/kensehen/Rpg-engine/build/CMakeFiles/rebuild_cache.dir
-/home/kensehen/Rpg-engine/build/CMakeFiles/rpg.dir
 /home/kensehen/Rpg-engine/build/CMakeFiles/edit_cache.dir

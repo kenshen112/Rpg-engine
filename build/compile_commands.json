@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/kensehen/Rpg-engine/build",
-  "command": "/bin/g++    -g   -o CMakeFiles/rpg.dir/main.cpp.o -c /home/kensehen/Rpg-engine/main.cpp",
-  "file": "/home/kensehen/Rpg-engine/main.cpp"
-}
-]
