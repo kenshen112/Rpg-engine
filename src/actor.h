@@ -7,7 +7,7 @@
 #include "velocity.h"
 
 const enum Input { UP, DOWN, LEFT, RIGHT };
-
+enum JobClass	 {FIGHTER, MAGE, WARRIOR, THEIF, SUMMONER};
 
 class Actor
 {
