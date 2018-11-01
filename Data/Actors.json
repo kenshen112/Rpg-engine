@@ -6,8 +6,8 @@
 },
 
 {
-"Name" : "Doku"
-"Type" : "Dragon"
-"HP" : 600
+"Name" : "Doku",
+"Type" : "Dragon",
+"HP" : 600,
 "Attack" : "Lightning Beam"
 }]
