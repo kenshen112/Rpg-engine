@@ -1,13 +1,14 @@
 [{
-"Name": "Musungo",
-"Type": "Dragon",
-"HP": 100,
-"Attack": "Sword_Attack"
-},
+		"Name": "Musungo",
+		"Type": "Dragon",
+		"HP": 100,
+		"Attack": "Sword_Attack"
+	},
 
-{
-"Name" : "Doku",
-"Type" : "Dragon",
-"HP" : 600,
-"Attack" : "Lightning Beam"
-}]
+	{
+		"Name": "Doku",
+		"Type": "Dragon",
+		"HP": 600,
+		"Attack": "Lightning Beam"
+	}
+]
