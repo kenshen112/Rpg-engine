@@ -6,12 +6,10 @@
 #include "ui.h"
 #include "common.h"
 
-
-
 static int window_H = 1280;
 static int window_W = 720;	
 	
-static enum State{TITLE, CUTSCENE, PLAYABLE, BATTLE, GAME_OVER};	 
+enum State{TITLE, CUTSCENE, PLAYABLE, BATTLE, GAME_OVER};	 
 
 class Game
 {

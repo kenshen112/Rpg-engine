@@ -13,7 +13,7 @@ private:
 	std::ifstream fin;
 	Creature *party;
 	json Heros;
-	JobClass jobAccess;
+	//JobClass jobAccess;
 
 public:
 	Characters();

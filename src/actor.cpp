@@ -6,7 +6,7 @@ Actor::Actor()
 
 void Actor::init(SDL_Renderer *rend)
 {
-	setSprite("Data/Sprites/mio.png", rend);
+	setSprite("/home/kenshen/Projects/Rpg-engine/Data/Sprites/mio.png", rend);
 }
 
 void Actor::enqueue(Input playerMovement)

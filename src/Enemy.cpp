@@ -43,7 +43,7 @@ Enemy Enemy::operator=(const Enemy & bad)
 
 void Enemy::init()
 {
-	fin.open("C:/Users/Timothy/source/repos/Rpg-engine/rpg/Data/Enemies.json");
+	fin.open("/home/kenshen/Projects/Rpg-engine/Data/Enemies.json");
 	json baddie = json::parse(fin);
 
 	listOfVillans = create(baddie);

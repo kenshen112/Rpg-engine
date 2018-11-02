@@ -8,7 +8,7 @@ Characters::Characters()
 
 bool Characters::openFile()
 {
-	fin.open("Data/Actors.json");
+	fin.open("/home/kenshen/Projects/Rpg-engine/Data/Actors.json");
 
 	if (fin)
 	{
