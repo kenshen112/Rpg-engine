@@ -1,16 +1,14 @@
 #pragma once
-#include <vector>
 #include "json.hpp"
+#include <vector>
 
-#include "position.h"
-#include "stats.h"
-#include "sprite.h"
 #include "Invetory.h"
+#include "position.h"
+#include "sprite.h"
+#include "stats.h"
 
-struct Creature
-{
-	Position pos;
-	Stats stat; 
-	Invetory inv;
+struct Creature {
+  Position pos;
+  Stats stat;
+  Invetory inv;
 };
-

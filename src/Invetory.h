@@ -1,12 +1,10 @@
 #pragma once
-#include <vector>
 #include "Items.h"
+#include <vector>
 
-class Invetory
-{
+class Invetory {
 public:
-	Invetory();
-	std::vector<Items> pack;
-	~Invetory();
+  Invetory();
+  std::vector<Items> pack;
+  ~Invetory();
 };
-

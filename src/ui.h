@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <string>
 #include <SDL.h>
 #include <SDL_ttf.h>
@@ -17,7 +18,9 @@ private:
 
 public:
 	ui();
-	SDL_Renderer *textBox(int w, int h, std::string text, SDL_Renderer *rend);
+	void init();
+	void textBox(int w, int h, std::string text, SDL_Renderer *rend);
+	void rectangle(int w, int h, SDL_Renderer *rend);
 	~ui();
 };
 

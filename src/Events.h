@@ -1,22 +1,20 @@
 #pragma once
-#include <queue>
 #include <iostream>
+#include <queue>
 #include <thread>
 
-
-class Events
-{
+class Events {
 private:
- std::queue <int> eventQueue;
- std::thread messages;
- int timer;
+  std::queue<int> eventQueue;
+  std::thread messages;
+  int timer;
+
 public:
-	Events();
-	Events(int t);
-	int send();
-	void enque(int queueItem, int timer);
-	void deque();
+  Events();
+  Events(int t);
+  int send();
+  void enque(int queueItem, int timer);
+  void deque();
 
-	~Events();
+  ~Events();
 };
-

@@ -1,12 +1,8 @@
 #pragma once
-#include <iostream>
 #include "Events.h"
 #include "move.h"
+#include <iostream>
 
-struct Common
-{
-	Events Message;
+struct Common {
+  Events Message;
 };
-
-
-

@@ -1,8 +1,10 @@
 #pragma once
 #include <iostream>
+#include <cstdint>
 #include <SDL.h>
 #include "actor.h"
 #include "Enemy.h"
+#include "tileMaps.h"
 #include "ui.h"
 #include "common.h"
 
@@ -19,7 +21,7 @@ private:
 	Uint64 NOW = SDL_GetPerformanceCounter();
 	Uint64 LAST = 0;
 
-	double deltaTime = 0;
+	std::uint32_t deltaTime = 0;
 	bool active = true;
 
 	SDL_Window * window;
@@ -31,7 +33,7 @@ private:
 
 	ui text;
 
-	int spriteLoop;
+	std::uint32_t spriteLoop;
 
 	Actor Musungo;
 	Enemy Baddies;

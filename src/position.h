@@ -1,50 +1,26 @@
 #pragma once
-class Position
-{
+class Position {
 private:
-	int pX;
-	int pY;
+  int pX;
+  int pY;
 
 public:
-	Position()
-	{
-		pX = 0;
-		pY = 0;
-	}
-	
-	void setPx(int x)
-	{
-		pX = x;
-	}
+  Position() {
+    pX = 0;
+    pY = 0;
+  }
 
-	void setPy(int y)
-	{
-		pY = y;
-	}
+  void setPx(int x) { pX = x; }
 
-	void addPx(int x)
-	{
-		pX += x;
-	}
+  void setPy(int y) { pY = y; }
 
-	void addPy(int y)
-	{
-		pY += y;
-	}
+  void addPx(int x) { pX += x; }
 
-	int getPx()
-	{
-		return pX;
-	}
+  void addPy(int y) { pY += y; }
 
-	int getPy()
-	{
-		return pY;
-	}
+  int getPx() { return pX; }
 
-	~Position()
-	{
+  int getPy() { return pY; }
 
-	}
+  ~Position() {}
 };
-

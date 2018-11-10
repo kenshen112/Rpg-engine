@@ -1,25 +1,23 @@
 #pragma once
-#include <vector>
-#include <random>
-#include "Party.h"
 #include "Enemy.h"
-class Battle
-{
+#include "Party.h"
+#include <random>
+#include <vector>
+class Battle {
 private:
-	std::vector<Characters*>tempParty;
-	std::vector<Enemy*>mobs;
-	SDL_Rect * enemySpaces;
-	SDL_Rect * playerSpaces;
-	Party *accessParty;
-	Enemy * accessMob;
-	int turnCounter;
-	int whosTurn;
+  std::vector<Characters *> tempParty;
+  std::vector<Enemy *> mobs;
+  SDL_Rect *enemySpaces;
+  SDL_Rect *playerSpaces;
+  Party *accessParty;
+  Enemy *accessMob;
+  int turnCounter;
+  int whosTurn;
 
 public:
-	Battle();
-	bool init();
+  Battle();
+  bool init();
 
-	void startBattle();
-	~Battle();
+  void startBattle();
+  ~Battle();
 };
-
