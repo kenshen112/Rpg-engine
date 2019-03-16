@@ -14,7 +14,7 @@ void ui::init() {
 
 void ui::rectangle(int w, int h, SDL_Renderer *rend) {
 
-  SDL_Rect *sorc, *dest;
+  SDL_Rect *sorc = nullptr, *dest = nullptr;
 
   if (rend == nullptr) {
     std::cerr << "Renderer is NULL" << std::endl;

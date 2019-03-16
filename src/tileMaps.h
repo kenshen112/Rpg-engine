@@ -11,13 +11,10 @@
 using json = nlohmann::json;
 
 struct Tile {
-  int tileHeight;
+  int tileHeight; // Do these really belong here?
   int tileWidth;
-  int rows;
-  int cols;
-  int gid;
-  int tileType;
-  int **data;
+  int currentTile; // Not So sure about this
+  int **data; // Wouldn't this do the same as currentTile?
 
   SDL_Rect srcTile;
 };
@@ -26,11 +23,14 @@ class TileMaps {
 private:
   std::ifstream fin;
   std::string filePath;
+  // Remeber Tile maps can be bigger then the screen
+  int gridX;
+  int gridY;
 
   SDL_Texture *renderedMap;
   std::string fileName;
   json tile_map;
-  std::vector<Tile> theMapTiles;
+  std::vector<Tile> theMapTiles; // better Way to hold this?
 
 public:
   TileMaps();

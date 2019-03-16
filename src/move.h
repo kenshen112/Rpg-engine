@@ -1,6 +1,7 @@
 #pragma once
 #include <SDL.h>
 #include "position.h"
+#include <iostream>
 #include "velocity.h"
 class Move
 {

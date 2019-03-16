@@ -16,10 +16,24 @@ bool Battle::init() {
   return true;
 }
 
+void Battle::inBattle()
+{
+	while (SDL_PollEvent(&e) != 0) 
+	{
+
+	}
+
+}
+
 void Battle::startBattle() {
   turnCounter = 0;
   whosTurn = 0;
-  // Draw menus call Battle Loop.
+  battleActive = true;
+
+  while (battleActive)
+  {
+	  inBattle();
+  }
 }
 
 Battle::~Battle() {}

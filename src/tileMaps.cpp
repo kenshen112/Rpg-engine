@@ -10,10 +10,10 @@ void TileMaps::load(std::string fileName, SDL_Renderer *rend) {
   tile_map = json::parse(fin);
   Tile tempLayer;
 
-  // tempLayer.tileHeight = tile_map["tileheight"].get<int>();
-  // tempLayer.tileWidth = tile_map["tilewidth"].get<int>();
-  layers = tile_map["layers"];
-  data = layers["data"];
+   tempLayer.tileHeight = tile_map["tileheight"].get<int>();
+   tempLayer.tileWidth = tile_map["tilewidth"].get<int>();
+   layers = tile_map["layers"];
+   data = layers["data"]; // Objection!
   for (auto i = data.begin(); i != data.end(); i++) {
 
     std::cout << i.key() << " " << i.value() << std::endl;
@@ -22,7 +22,6 @@ void TileMaps::load(std::string fileName, SDL_Renderer *rend) {
     }
   }
 
-  tempLayer.gid = tile_map["firstgid"].get<int>();
   theMapTiles.push_back(tempLayer);
 }
 
@@ -31,13 +30,13 @@ void TileMaps::drawMap(SDL_Renderer *rend) {
   SDL_Rect dest;
 
   for (int i = 0; i < theMapTiles.size(); i++) {
-    src.x = theMapTiles[i].rows;
-    src.y = theMapTiles[i].cols;
+    src.x =  gridX;
+    src.y =  gridY;
     src.w = theMapTiles[i].tileWidth;
     src.h = theMapTiles[i].tileHeight;
 
-    dest.x = theMapTiles[i].rows;
-    dest.y = theMapTiles[i].cols;
+    dest.x = gridX;
+    dest.y = gridY;
     dest.w = src.w;
     dest.h = src.h;
 
